@@ -21,6 +21,8 @@ const app = express();
 const session = require('express-session');
 //which allows the Express app to create and manage user sessions.
 
+//import the package
+const MongoStore = require('connect-mongo');
 
 //MODELS
 //export them from model.js
@@ -45,11 +47,18 @@ app.set('views', path.join(__dirname, 'views')); //it explicity sets the path wh
 
 app.use(express.json()); // to parse JSON data sent in POST requests (useful for AJAX requests)
 
+  
+// when true ->> saveUninitialized: true //Save new sessions to the store even if they haven't been modified yet.
 app.use(session({
-  secret: process.env.API_KEY, //set up a session management using a secret key
+  secret: process.env.SESSION_SECRET, //set up a session management using a secret key
   resave: false, //Don't save the session back to the store if it hasn't changed.
-  saveUninitialized: true //Save new sessions to the store even if they haven't been modified yet.
+  saveUninitialized: false, // only store sessions that are used
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI, // MongoDB Atlas URI
+    ttl: 14 * 24 * 60 * 60 // sessions last for 14 days
+  })
 }));
+
 
 // Connect to MongoDB (database)
 mongoose.connect(process.env.MONGODB_URI)
