@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body data-page="cart">
+    <section class="cart-section">
+        <h1 class="cart-h1">Your Cart</h1>    
+        <a href="/online-orders" class="navbar-link navbar-cart navbar-cart-btn">Back to online orders</a>
+        <div class="online-container">
+            <div id="cartItemsContainer">
+            <% cart.forEach(item => { %>
+                <div class="item-container" data-id="<%= item.id %>" data-price="<%= item.price %>">
+                    <h3 class="item-title"><%= item.title %> - <%= item.quantity %> selected</h3>
+                    <img class="w-100" src="<%= item.imageURL %>" alt="<%= item.title %>">
+                    <p class="item-title"><%= item.text %></p>
+                    <p class="item-price">$<%= (item.price * item.quantity).toFixed(2) %></p>
+                    <button class="trash-btn"><i class="fas fa-trash"></i></button>
+                </div>
+            <% }) %>
+        </div>
+          </div>
+            <h3 id="cartTotal" class="item-price" style="font-size: 2rem;">Total: $<%= total.toFixed(2) %></h3>
+            <div class="btns-nav">
+                <form action="/clear-cart" method="POST">
+                    <button id="clearCartBtn">Clear Cart</button>
+                </form>
+                <form action="/thankyou" method="POST">
+                    <button class="checkout-btn" type="submit">Checkout</button>
+                </form>
+            </div>
+    </section>
+<script src="script.js"></script>
+</body> 
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca's Loaves</title>
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+        </div>
+        <div class="nav-list">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/#about" class="navbar-link">About us</a>
+            <a href="/careers" class="navbar-link">Careers page</a>
+            <a href="/online-orders" class="navbar-link">Online orders</a>
+            <a href="/contact" class="navbar-link navbar-contact">Contact</a>
+            <a href="/cart" class="navbar-link navbar-cart"><i class="fas fa-cart-shopping"></i></a>
+        </div>
+    </nav>
+    <section class="section-1" id="home">
+        <div class="description">
+            <h1>Luca's Loaves</h1>
+            <p>We are a small business, we make artisan sourdough bread baking. 
+                <br>The business has been slowly growing over the last two years and Luca feels it’s time to gain a stronger web presence and to allow customers to be able to order online and see the range of products offered. He also wants to advertise the bread making classes he’s running.
+            The company’s statement of purpose is: We make real bread from the best organic ingredients – by hand, with dedication and with the best of care. 
+            </p>
+        </div>
+        <img src="/images/loaves.jpg" alt="loaves">
+        
+    </section>
+    <section class="section-2" id="about">
+        <img src="/images/bg.jpg" alt="loaves">
+        <div class="about-us">
+            <h2>Key facts about Luca and the bread!</h2>
+            <p>Luca commenced his career as a lifeguard but was laid off. 
+                <br>He found he enjoyed making bread and experimented and in no time at all had built up a thriving business.
+                <br>About sourdough bread:
+                <ul>
+                    <li>no store/commercial yeast</li>
+                    <li>Hand kneaded and shaped in-house</li>
+                    <li>Prepared over 14-17hrs</li>
+                    <li>Organic flour, the water is filtered and the electricity used to power the oven is solar powered!</li>
+                    <li>Store bought bread is mixed and baked within 2 hours meaning the gluten content is really high and can lead to someone feeling clogged up when eating bread. Sourdough is a great alternative and much easier to digest</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const id = hash.substring(1);
+                const element = document.getElementById(id);
+                if (element) {
+                // Scroll to top immediately so browser doesn't jump
+                window.scrollTo(0, 0);
+
+                // Remove the hash from the URL so browser doesn't jump again on back button
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+
+                // Wait a tick for layout/rendering then smooth scroll
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+                }
+            }
+        });
+    </script>
+    <script src="/script.js"></script>
+</body>
+</html>

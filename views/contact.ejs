@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+        </div>
+        <div class="nav-list">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/#about" class="navbar-link">About us</a>
+            <a href="/careers" class="navbar-link">Careers page</a>
+            <a href="/online-orders" class="navbar-link">Online orders</a>
+            <a href="/contact" class="navbar-link navbar-contact">Contact</a>
+            <a href="/cart" class="navbar-link navbar-cart"><i class="fas fa-cart-shopping"></i></a>
+        </div>
+    </nav>
+    <section class="section-1-contact">
+        <div class="contact-container">
+            <div class="info">
+                <h2 class="htitle">We are open 7 days a week : 7am - 4pm</h2>
+                <div class="info-paragraph">
+                    <p><span>Name:</span> Luca’s Loaves
+                    <br><span>Address:</span><a href="https://www.google.com/maps/search/?api=1&query=128+Chalmers+St,+Surry+Hills,+NSW" target="_blank">Click here to get directions</a>
+                    <br><span>Telephone number:</span><a href="tel:1800 849 165">1800 849 165</a>
+                    <br><span>Email address:</span><a href="mailto:info@lucasloaves.com.au">info@lucasloaves.com.au</a> 
+                    <br><a href="#" id="openFormLink">Click here to open the contact form.</a>
+                    </p>
+                </div>
+            </div>
+            <div id="map" class="map"></div>
+        </div>
+    </section>
+    <section class="section-footer">
+        <div class="footer">
+            <div class="social-media">
+                <a href="#"> <i class="fab fa-facebook"></i></a>
+                <a href="#"> <i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contact Us</h2>
+            <form action="/contact" method="POST" class="modal-form">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Message:</label>
+            <textarea name="message" required></textarea>
+
+            <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>

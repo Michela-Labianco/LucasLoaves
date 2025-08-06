@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body data-page="jobs">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+        </div>
+        <div class="nav-list">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/#about" class="navbar-link">About us</a>
+            <a href="/careers" class="navbar-link">Careers page</a>
+            <a href="/online-orders" class="navbar-link">Online orders</a>
+            <a href="/contact" class="navbar-link navbar-contact">Contact</a>
+            <a href="/cart" class="navbar-link navbar-cart"><i class="fas fa-cart-shopping"></i></a>
+        </div>
+    </nav>
+    <section class="section-1-careers">
+        <div class="job-description">
+            <h3 class="job-title">Production/Bakery Assistant</h3>
+            <p class="job-text">We are looking for a production assistant to join our team!</p>
+            <a href="#" class="open-job-modal">Apply</a>
+        </div>
+        <div class="job-description">
+            <h3 class="job-title">Baker</h3>
+            <p class="job-text">We are looking for a production assistant to join our team!</p>
+            <a href="#" class="open-job-modal">Apply</a>
+        </div>
+        <div class="job-description">
+            <h3 class="job-title">Front of House Supervisors</h3>
+            <p class="job-text"> We are currently hiring Front of House Supervisors who are passionate about delivering exceptional customer service and ensuring a delightful experience for our costumers.</p>
+            <a href="#" class="open-job-modal">Apply</a>
+        </div>
+        
+        <div id="jobModal" class="modal">
+        <div class="modal-content jobform-modal">
+            <span class="close-job-modal">&times;</span>
+            <form action="/careers" method="POST" class="modal-form" enctype="multipart/form-data">
+                <input type="text" name="jobTitle" placeholder="Job Title" required>
+                
+                <label>Upload your CV</label>
+                <input class="input" type="file" name="resume" required>
+
+                <label>Upload your Cover Letter</label>
+                <input class="input" type="file" name="coverLetter">
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    
+<script src="/script.js"></script>
+</body>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Orders</title>
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body data-page="online-orders">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+        </div>
+        <div class="nav-list">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/#about" class="navbar-link">About us</a>
+            <a href="/careers" class="navbar-link">Careers page</a>
+            <a href="/online-orders" class="navbar-link">Online orders</a>
+            <a href="/contact" class="navbar-link navbar-contact">Contact</a>
+            <a href="/cart" class="navbar-link navbar-cart"><i class="fas fa-cart-shopping"></i></a>
+        </div>
+    </nav>
+    <section class="section-1-online">
+        <div class="online-container">
+            <!-- Don't try to extract price from inner <p> tags — it's unreliable. 
+                Use data-* attributes on the outer container. -->
+            <div class="item-container" data-price="7.00" data-id="sourdough-white">
+                <h3 class="item-title">Sourdough White</h3>
+                <img src="/images/white.jpg" alt="">
+                <p class="item-title">Our standard sourdough</p>
+                <p class="item-price">$ 7.00</p>
+                <div class="btns-container">
+                    <button><i class="fa-regular fa-heart heart" title="add to favourites"></i></button>
+                    <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="item-container" data-price="8.00" data-id="sourdough-rye">
+                <h3 class="item-title">Sourdough Rye</h3>
+                <img src="/images/rye.jpg" alt="">
+                <p class="item-title">Sourdough created with 50% rye flour</p>
+                <p class="item-price">$ 8.00</p>
+                <div class="btns-container">
+                    <button><i class="fa-regular fa-heart heart" title="add to favourites"></i></button>
+                    <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="item-container" data-price="9.00" data-id="sourdough-spelt">
+                <h3 class="item-title">Sourdough Spelt</h3>
+                <img src="/images/spelt.jpg" alt="">
+                <p class="item-title">Sourdough created with 100% spelt flour</p>
+                <p class="item-price">$ 9.00</p>
+                <div class="btns-container">
+                    <button><i class="fa-regular fa-heart heart" title="add to favourites"></i></button>
+                    <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="item-container" data-price="9.50" data-id="sourdough-seeded">
+                <h3 class="item-title">Sourdough Seeded</h3>
+                <img src="/images/seeded.jpg" alt="">
+                <p class="item-title">Sourdough including a mixture of yummy seeds</p>
+                <p class="item-price">$ 9.50</p>
+                <div class="btns-container">
+                    <button><i class="fa-regular fa-heart heart" title="add to favourites"></i></button>
+                    <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="item-container" data-price="385.00" data-id="sourdough-classes">
+                <h3 class="item-title">Sourdough breadmaking classes</h3>
+                <img src="/images/classes.jpg" alt="">
+                <p class="item-title">First Saturday of every month:</p>
+                <p class="item-title">9 am to 5 pm with lunch provided</p>
+                <p class="item-price">Learn to make your own bread $350 + GST</p>
+                <div class="btns-container">
+                    <button><i class="fa-regular fa-heart heart" title="add to favourites"></i></button>
+                    <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="/script.js"></script>
+</body>
+</html>
