@@ -767,6 +767,9 @@ button:hover{
     .section-1-careers{
         height: 130vh;
     }
+    .online-container{
+        padding: 0;
+    }
     body[data-page="online-orders"] .navbar {
         top: 0 !important;
         left: 0 !important;
