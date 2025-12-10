@@ -734,4 +734,8 @@ button:hover{
         display: flex;
         flex-direction: column;
     }
+    .social-media{
+        position: static;
+        margin-top: 4rem;
+    }
 }
