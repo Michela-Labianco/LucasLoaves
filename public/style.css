@@ -596,7 +596,6 @@ button:hover{
     }
     .section-2{
         margin-top: 25rem;
-        margin-bottom: 2rem;
     }
     .section-2 h2{
         font-size: 2.5rem;
@@ -604,6 +603,7 @@ button:hover{
     }
     .section-2 .about-us{
         width: 89%;
+        font-size: 1.5rem;
     }
 
 }
