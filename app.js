@@ -138,9 +138,13 @@ app.get('/cart', (req, res) => {
 });
 
 //to send the cart data as JSON
+//access and return that data via the GET /api/cart endpoint.
 app.get('/api/cart', (req, res) => {
-  res.json({ cart: req.session.cart || [] });
+  res.json({ cart: req.session.cart || [] }); //store cart info
 });
+//It responds with the current cart data stored in the session.
+// If req.session.cart exists -> it returns that array.
+// If not -> it returns an empty array ([]), so the frontend still gets a valid response.
 
 app.post('/thankyou', (req, res) => {
   try {

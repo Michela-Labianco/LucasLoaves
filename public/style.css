@@ -734,7 +734,4 @@ button:hover{
         display: flex;
         flex-direction: column;
     }
-    #map{
-        z-index: -1;
-    }
 }

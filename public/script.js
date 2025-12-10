@@ -142,7 +142,7 @@ const page = document.body.dataset.page; //get the data-page attribute
       const button = container.querySelector('.cart-btn');
       if (!button) return;
 
-      transformToCartControls(button, item);
+      transformToCartControls(button, item); //now uses item.quantity, it ensures is present in the server response
 
       if (page === 'cart') {
         const h3 = container.querySelector('h3');
