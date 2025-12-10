@@ -412,8 +412,8 @@ button:hover{
 }
 .cart-count{
     position: absolute;
-    top: -1.5rem;
-    right: -1rem;
+    top: -1.8rem;
+    right: -2rem;
     background-color: #3d2500;
     color: #fff;
     font-size: 1.2rem;
@@ -450,17 +450,18 @@ button:hover{
     line-height: 5rem; /* vertically center text */
     width: 25rem;
     height: 5rem;
-    top: -10rem;
-    left: 60rem;
+    margin-top: 5rem;
     background-color: #3d2500;
     color: #fff;
     border-radius: 2rem;
     text-decoration: none;
     border: solid 0.3rem #fff inset;
-    margin-right: 20rem;
 }
 .navbar-cart-btn::before{
     display: none;
+}
+.empty-cart-title{
+    margin-top: 10rem;
 }
 .section-1-careers{
     padding-top: 20rem;
@@ -645,12 +646,12 @@ button:hover{
     }
     .navbar-wrapper{
         width: 100vw;
-        height: 100%;
+        height: 100vh;
         background-color: #3d2500; 
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 999;
+        z-index: 999999 !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -725,14 +726,21 @@ button:hover{
     .line-2{
         transform: rotate(-40deg);
     }
-    .navbar-cart-btn{
-        left: 10rem;
-        top: -20rem;
+    .empty-cart-title{
+        font-size: 3.5rem;
+        margin-top: 10rem;
     }
     .cart-section{
-        padding-top: 20rem;
+        padding-top: 5rem;
         display: flex;
         flex-direction: column;
+    }
+    .cart-h1{
+        padding-top: 5rem;
+    }
+    .cart-count{
+        top: -1rem;
+        right: 5rem;
     }
     .social-media{
         position: static;
