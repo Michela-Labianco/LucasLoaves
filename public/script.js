@@ -520,6 +520,9 @@ const page = document.body.dataset.page; //get the data-page attribute
     //and controlling the timing of hiding and removing the mobile menu from the DOM.
     closeIcon.addEventListener('click', () => {
       wrapper.classList.remove('active'); //remove the class
+      //unlock body scrolling
+      document.body.classList.remove('no-scroll');
+
       setTimeout(() => {
         wrapper.remove(); //remove it from the DOM
 
@@ -555,6 +558,9 @@ const page = document.body.dataset.page; //get the data-page attribute
       wrapper.classList.add('active');
       closeIcon.style.transition = 'opacity 0.3s ease';
       closeIcon.style.opacity = '1';
+
+      //lock body scrolling
+      document.body.classList.add('no-scroll');
     });
   }
 
@@ -569,6 +575,7 @@ const page = document.body.dataset.page; //get the data-page attribute
   function handleIconClick() {
     navIcon.remove(); // Remove hamburger icon
     createNavbarWrapper(); // open menu
+    
   }
 
   //react to screen size change
