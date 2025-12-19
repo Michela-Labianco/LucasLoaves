@@ -668,7 +668,7 @@ button:hover{
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 999999 !important;
+        z-index: 999999 !important; /*increased massively so nothing can draw above it*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -777,3 +777,11 @@ button:hover{
     }
 }
 
+
+/*absolute elements are removed from the normal flow -> they don't push content above them and can easily overlap other sections
+
+fixed absolute on desktop but not on mobile 
+on mobile -> .social-media{ position: static; 
+so it gets positioned according to the normal flow of the document and it always appears after the map
+
+*/
