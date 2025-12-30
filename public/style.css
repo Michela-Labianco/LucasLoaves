@@ -116,14 +116,14 @@ h1{
 
 .section-2 .about-us {
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #000; /* Change to white if needed for contrast */
     font-size: 1.5rem;
     text-align: center;
     z-index: 10;
-    width: 50%;
+    width: 55%;
     max-width: 100rem;
     line-height: 2;
 }
