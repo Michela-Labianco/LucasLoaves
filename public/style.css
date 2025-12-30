@@ -775,6 +775,10 @@ button:hover{
         left: 0 !important;
         right: 0 !important;
     }
+    .section-2 .about-us{
+        width: 90%;
+        font-size: 1.3rem;
+    }
 }
 
 
